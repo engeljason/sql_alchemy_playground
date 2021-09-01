@@ -148,3 +148,6 @@ def getRange(start=None, end=None):
         'TAVG' : range_results[2]
     }
     return jsonify(range_dict)
+
+if __name__ == '__main__':
+    app.run()
