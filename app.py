@@ -86,18 +86,17 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 routes = [
-    "/",
     "/api/v1.0/precipitation",
     "/api/v1.0/stations",
     "/api/v1.0/tobs",
-    "/api/v1.0/<start>/<end>"
+    "/api/v1.0/start/end"
 ]
 
 @app.route("/")
 def index():
     message = "Available Routes:\n"
     for route in routes:
-        message+= f'<p>{route}</p>'
+        message+= f'<br><a href={route}>{route}</a>'
     return message
 
 
